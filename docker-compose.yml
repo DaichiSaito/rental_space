@@ -6,6 +6,7 @@ services:
     volumes:
       - .:/myapp:cached
       - bundle:/usr/local/bundle
+      - /myapp/node_modules
     ports:
       - 3000:3000
     depends_on:
@@ -14,6 +15,7 @@ services:
     tty: true
   db:
     image: mysql:5.7.33
+    platform: linux/amd64
     environment:
       MYSQL_ROOT_PASSWORD: "mysql"
     ports:

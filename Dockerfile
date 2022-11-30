@@ -11,7 +11,7 @@ RUN apt-get update; \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list; \
     apt-get update -qq && \
     apt-get install -y --no-install-recommends \
-		  vim mariadb-client tzdata nodejs yarn
+      vim mariadb-client tzdata nodejs yarn
 
 COPY Gemfile ${ROOT}
 COPY Gemfile.lock ${ROOT}
